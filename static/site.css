@@ -1,0 +1,74 @@
+
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    margin-top: 30px;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+ul {
+    margin-bottom: 20px;
+}
+
+.text {
+    text-align: center;
+    border: 2px solid;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    font-weight: bold;
+    padding: 10px;
+    margin: 40px auto; /* Center horizontally and add some top and bottom margin */
+    max-width: 80%; /* Limit width to 80% of the container width */
+}
+
+.text a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* Media Query for screens smaller than 768px */
+@media (max-width: 768px) {
+    .text {
+        padding: 5px;
+        font-size: 14px;
+    }
+}
+
+/* Media Query for screens between 768px and 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .text {
+        padding: 8px;
+        font-size: 16px;
+    }
+}
+
+/* Media Query for screens larger than 1024px */
+@media (min-width: 1024px) {
+    .text {
+        padding: 10px;
+        font-size: 18px;
+    }
+}

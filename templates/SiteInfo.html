@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TiCorn - Site Info</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='nav.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='site.css')}}" />
+    <script src="{{ url_for('static', filename='meta.js') }}"></script>
+</head>
+<body>
+    <nav id='menu'>
+        <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+        <ul>
+            <li><a href='/'>Home</a></li>
+            <li><a href='/info'>Site Info</a></li>
+            <li><a href='/Request_Upload'>Request/Upload Video</a></li>
+            <li><a href='/report' style="color: red;">Report Video</a></li>
+        </ul>           
+    </nav>
+    <div class="line"></div>
+
+    <div class="container">
+        <h1>Site Info</h1>
+
+        <p>Welcome to TiCorn! Here you can find all the information about our site.</p>
+
+        <h2>Recently Updated</h2>
+        <ul>
+            <li>Fixed Buges</li>
+            <li>Added New Videos</li>
+            <li>Added More Categories</li>
+        </ul>
+
+        <h2>About TiCorn</h2>
+        <p>TiCorn is a platform dedicated to sharing and viewing videos. Whether you're looking for something else, TiCorn has something for everyone.</p>
+        <p>Our mission is to provide a user-friendly platform where users can discover, upload, and enjoy a wide range of video content.</p>
+
+        <h2>Features</h2>
+        <ul>
+            <li>Upload and share your own videos.</li>
+            <li>Discover a wide range of videos on different topics.</li>
+            <li>Create playlists and save your favorite videos.  (SOON)</li>
+            <li>Engage with the community through comments and likes.  (SOON)</li>
+        </ul>
+
+        <h2>Terms of Service</h2>
+        <p>Our Terms of Service outline the rules and guidelines for using our platform. By accessing or using TiCorn, you agree to comply with these terms. Please review our <a href="/terms">Terms of Service</a> for more information.</p>
+
+        <h2>Privacy Policy</h2>
+        <p>Your privacy is important to us. Our Privacy Policy explains how we collect, use, and protect your personal information. We encourage you to review our <a href="/privacy">Privacy Policy</a> to understand how we handle your data.</p>
+
+        <h2>Bug Report</h2>
+        <p>If you encounter any issues while using our platform, please report them to <a href="mailto:bugs@ticorn.com">bugs@ticorn.com</a>. We appreciate your feedback!</p>
+
+        <div class="text"><br><P>&copy; 2024 <a href="#">Ticorn</a>. All rights reserved. | Updated Version: 1.0 (May 22, 2024)</P></div>
+        </div>
+</body>
+</html>

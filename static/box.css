@@ -1,0 +1,34 @@
+
+
+.styled-div {
+    background-color: white;
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2); /* Black shadow */
+    text-align: center;
+    color: black;
+    overflow: hidden; /* Ensures the image doesn't overflow its container */
+    border-radius: 10px;
+}
+
+.styled-div img {
+    width: 100%; /* Makes the image fill its container horizontally */
+    height: auto; /* Maintains the aspect ratio */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Divide the container into four equal parts */
+    grid-gap: 3.5px; /* Initial gap between items */
+}
+
+@media screen and (max-width: 1200px) {
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr); /* Change to four columns on smaller screens */
+        grid-gap: 4px; /* Adjusted gap on smaller screens */
+    }
+}
+.styled-div {
+    width: 300px; /* Adjust according to your layout */
+    height: 200px; /* Adjust according to your layout */
+    overflow: hidden;
+    margin-bottom: 20px; /* Adjust spacing */
+}

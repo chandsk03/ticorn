@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TiCorn - Screen</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='player.css')}}" />
+    <script src="{{ url_for('static', filename='meta.js') }}"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="video-wrapper">
+            <video controls id="videoPlayer">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+    <button onclick="goBack()">Turn Off Screen</button>
+    <script>
+        // Function to parse the query parameter from the URL
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+
+        // Get the video URL from the query parameter
+        var videoUrl = getParameterByName('video');
+        if (videoUrl) {
+            // Set the video source dynamically
+            document.getElementById('videoPlayer').src = videoUrl;
+        } else {
+            // Handle case where video URL is not provided
+            console.error('Video URL not provided.');
+        }
+
+        // Function to go back
+        function goBack() {
+            window.history.back();
+        }
+
+        const video = document.querySelector('video');
+video.addEventListener('click', togglePlay);
+
+function togglePlay() {
+    if (video.paused) {
+        video.play();
+    } else {
+        video.pause();
+    }
+}
+    </script>
+</body>
+</html>

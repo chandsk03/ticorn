@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TiCorn - Request/Upload Video</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='nav.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='video.css')}}" />
+    <script src="{{ url_for('static', filename='meta.js') }}"></script>
+</head>
+<body>
+    <nav id='menu'>
+        <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+        <ul>
+            <li><a href='/'>Home</a></li>
+            <li><a href='/info'>Site Info</a></li>
+            <li><a href='/Request_Upload'>Request/Upload Video</a></li>
+            <li><a href='/report' style="color: red;">Report Video</a></li>
+        </ul>               
+    </nav>
+    <div class="line"></div>
+
+    <h1>Request/Upload Video</h1>
+
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <label for="video_title">Video Title:</label><br>
+        <input type="text" id="video_title" name="video_title" required placeholder="Example: Pornstar"><br><br>
+        <label for="video_file">Upload Video:</label><br>
+        <input type="file" id="video_file" name="video_file" accept="video/*" required><br><br>
+        <label for="description">Description (optional):</label><br>
+        <textarea id="description" name="description" rows="4" cols="50" placeholder="Please provide a description of the video to facilitate a quick upload."></textarea><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <div class="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or need assistance, please contact us at <a href="mailto:contact@ticorn.com">contact@ticorn.com</a>.</p>
+    </div>
+</body>
+</html>

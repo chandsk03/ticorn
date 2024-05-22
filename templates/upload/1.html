@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticorn - Upload</title>
+    <style>
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ensure full viewport height */
+}
+
+.inner-div {
+    background-color: lightblue;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 80%; /* Adjusted for small screens */
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+}
+
+/* Adjust styles for small screens */
+@media only screen and (max-width: 600px) {
+    .inner-div {
+        padding: 10px;
+    }
+}
+    </style>
+    <script src="{{ url_for('static', filename='meta.js') }}"></script>
+</head>
+<body>
+    <div class="inner-div">
+        <h1>No Videos Available</h1>
+        <p>You can help us by <a href="/Report.html">uploading</a> videos.</p>
+    </div>
+</body>
+</html>

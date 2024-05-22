@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TiCorn - Report Video</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='nav.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='report.css')}}" />
+    <script src="{{ url_for('static', filename='meta.js') }}"></script>
+</head>
+<body>
+    <nav id='menu'>
+        <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+        <ul>
+            <li><a href='/'>Home</a></li>
+            <li><a href='/info'>Site Info</a></li>
+            <li><a href='/Request_Upload'>Request/Upload Video</a></li>
+            <li><a href='/report' style="color: red;">Report Video</a></li>
+        </ul>          
+    </nav>
+    <div class="line"></div>
+
+    <h1>Report Video</h1>
+
+    <form action="/report" method="post">
+        <label for="video_url">Video URL:</label><br>
+        <input type="url" id="video_url" name="video_url" required><br><br>
+        <label for="reason">Reason for Reporting:</label><br>
+        <textarea id="reason" name="reason" rows="4" cols="50" required></textarea><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
